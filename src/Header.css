@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px;
+  z-index: 100;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  height:57px;
+  width: 57px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px; 
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight:600;
+}
