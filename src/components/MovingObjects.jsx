@@ -32,7 +32,7 @@ const MovingObjects = () => {
           style={{
             animation: `${obj.direction} ${obj.speed}s linear infinite`,
             transform: `scale(${obj.scale})`,
-            bottom: `${index * 20}%`, 
+            top: `${index * 15}%`, 
           }}
           className="moving-object"
           alt=""

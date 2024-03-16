@@ -4,6 +4,7 @@ header {
   align-items: center;
   padding: 40px 40px;
   z-index: 100;
+  position: relative;
 }
 
 .header-logo {
