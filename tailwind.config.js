@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
         extend: {
           animation: {
@@ -23,9 +21,11 @@ module.exports = {
             "syncopate": ["Syncopate", "sans-serif"],
             "archivo": ["Archivo", "sans-serif"],
             "inter": ["Inter", "sans-serif"],
-          }
+          },
+          dropShadow: {
+             "md": "3px 3px 0 rgba(0, 0, 0, 1)",
+          },
         },
       },
   plugins: [],
-}
-
+};
