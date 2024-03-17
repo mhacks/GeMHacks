@@ -58,11 +58,11 @@ const Hero = () => (
           ></div>
         </div>
       </div>
-      <div className="flex gap-2 content-center justify-center mt-10">
+      <div className="flex flex-col md:flex-row md:gap-2 gap-4 content-center justify-center mt-10">
         <Button onClick={() => openInNewTab("https://tally.so/r/w2eB7j")}>
           Apply!
         </Button>
-        <Button onClick={() => openInNewTab("https://perchance.org/famous-scientist")}>
+        <Button onClick={() => openInNewTab("https://perchance.org/famous-scientist")} >
           I'm Feeling Lucky
         </Button>
       </div>
