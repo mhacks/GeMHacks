@@ -29,7 +29,7 @@ const Hero = () => (
           Hacks
         </div>
       </div>
-      <div className="flex items-center justify-between rounded-full bg-white h-[4vh] w-[44vw] mt-[4vh] border-[1pt] border-black drop-shadow-md px-4">
+      <div className="flex items-center justify-between rounded-full bg-white h-[4vh] sm:w-[44vw] w-[80vw] mt-[4vh] border-[1pt] border-black drop-shadow-md px-4">
         <img
           src={process.env.PUBLIC_URL + "/images/icons/search_icon.svg"}
           alt="Search"
