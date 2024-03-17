@@ -7,7 +7,7 @@ const openInNewTab = (url) => {
 
 const Hero = () => (
   <div className="mx-4 lg:mx-[230px] mb-[106px] mt-[7px] h-auto sm:w-auto min-h-[75vh] justify-center content-center bg-fuchsia-300 border-4 border-black hero-container">
-    <div className="hero-content flex justify-center items-center flex-col -mt-[9rem]">
+    <div className="hero-content flex justify-center items-center flex-col -mt-[1rem]">
       <img
         src={process.env.PUBLIC_URL + "/images/logos/gemini_logo.svg"}
         alt="hero"
