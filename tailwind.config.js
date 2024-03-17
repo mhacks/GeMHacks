@@ -4,8 +4,8 @@ module.exports = {
   theme: {
         extend: {
           animation: {
-            marquee: "marquee 10s linear infinite",
-            marquee2: "marquee2 10s linear infinite",
+            marquee: "marquee 30s linear infinite",
+            marquee2: "marquee2 30s linear infinite",
           },
           keyframes: {
             marquee: {
