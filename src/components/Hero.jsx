@@ -11,7 +11,7 @@ const Hero = () => (
       <img
         src={process.env.PUBLIC_URL + "/images/logos/google_hero_logo.webp"}
         alt="hero"
-        className="content-center justify-center h-[140px] w-[400px]"
+        className="content-center justify-center h-auto sm:w-[30vw] w-[60vw]"
         style={{ filter: "drop-shadow(3px 4px 0px #000)" }}
       />
       <img
