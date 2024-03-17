@@ -9,9 +9,10 @@ const Hero = () => (
   <div className="mx-4 lg:mx-[230px] mb-[106px] mt-[7px] h-auto sm:w-auto min-h-[75vh] justify-center content-center bg-fuchsia-300 border-4 border-black hero-container">
     <div className="hero-content flex justify-center items-center flex-col -mt-[1rem]">
       <img
-        src={process.env.PUBLIC_URL + "/images/logos/gemini_logo.svg"}
+        src={process.env.PUBLIC_URL + "/images/logos/google_hero_logo.webp"}
         alt="hero"
-        className="content-center justify-center h-[154px] w-[418px]"
+        className="content-center justify-center h-[140px] w-[400px]"
+        style={{ filter: "drop-shadow(3px 4px 0px #000)" }}
       />
       <img
         src={process.env.PUBLIC_URL + "/images/icons/x.svg"}
