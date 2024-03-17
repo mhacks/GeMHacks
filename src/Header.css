@@ -21,7 +21,6 @@ header {
   width: 100%;
 }
 
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -38,4 +37,10 @@ header {
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   font-weight:600;
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    gap: 22px;
+  }
 }
