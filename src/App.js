@@ -33,8 +33,6 @@ function App() {
       </div>
     
       </div>
-      <div className="h-[100vh]">
-      </div>
     </div>
   );
 }
