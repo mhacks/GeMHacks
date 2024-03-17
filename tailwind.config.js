@@ -2,11 +2,30 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      dropShadow: {
-        "md": "3px 3px 0 rgba(0, 0, 0, 1)",
+        extend: {
+          animation: {
+            marquee: "marquee 10s linear infinite",
+            marquee2: "marquee2 10s linear infinite",
+          },
+          keyframes: {
+            marquee: {
+              "0%": { transform: "translateX(0%)" },
+              "100%": { transform: "translateX(-100%)" },
+            },
+            marquee2: {
+              "0%": { transform: "translateX(100%)" },
+              "100%": { transform: "translateX(0%)" },
+            },
+          },
+          fontFamily: {
+            "syncopate": ["Syncopate", "sans-serif"],
+            "archivo": ["Archivo", "sans-serif"],
+            "inter": ["Inter", "sans-serif"],
+          },
+          dropShadow: {
+             "md": "3px 3px 0 rgba(0, 0, 0, 1)",
+          },
+        },
       },
-    },
-  },
   plugins: [],
 };
