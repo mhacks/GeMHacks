@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 import '../MovingObjects.css'; 
 
 const imagePaths = [
@@ -20,10 +21,10 @@ const MovingObjects = () => {
       const imagePath = imagePaths[Math.floor(Math.random() * imagePaths.length)];
       const speed = Math.random() * (10) + 80; 
       const scale = Math.random() * (0.3 - 0.2) + 0.2;
-      const direction = Math.random() > 0.5 ? 'moveRight' : 'moveLeft'; 
-      const top = `${index * (Math.random() * 5) + 10}%`; 
-      const left = `${Math.random() * 100}%`;
-      return { imagePath, speed, scale, direction, top, left }; // Include left property
+      const direction = index % 2 === 0 ? 'moveRight' : 'moveLeft';
+      const top = `${Math.random() * (100 - 5) + 10}%`;
+      const left = `${Math.random() * (100 - 5) + 10}%`;
+      return { imagePath, speed, scale, direction, top, left }; 
     });
 
     setObjects(generatedObjects);
@@ -32,6 +33,7 @@ const MovingObjects = () => {
   return (
     <div className="moving-objects-container absolute top-0 left-0 w-full h-full pointer-events-none">
       {objects.map((obj, index) => (
+        <Parallax speed={-Math.random() * 20 - 30} key={index}>
         <img
           key={index}
           src={process.env.PUBLIC_URL + obj.imagePath}
@@ -40,11 +42,13 @@ const MovingObjects = () => {
             transform: `scale(${obj.scale})`,
             top: obj.top,
             left: obj.left, 
-            mixBlendMode: 'add',
+            mixBlendMode: 'screen',
+            position: 'absolute',
           }}
           className="moving-object"
           alt=""
         />
+    </Parallax>
       ))}
     </div>
   );

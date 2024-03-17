@@ -6,7 +6,7 @@ const openInNewTab = (url) => {
 };
 
 const Hero = () => (
-  <div className="mx-4 lg:mx-[230px] mb-[106px] mt-[7px] h-auto sm:w-auto min-h-[75vh] justify-center content-center border-4 border-black hero-container bg-transparent">
+  <div className="mx-4 lg:mx-[230px] mb-[80px] mt-[7px] h-auto sm:w-auto min-h-[75vh] justify-center content-center border-4 border-black hero-container bg-transparent">
     <div className="bg-purple-400/70 h-[100%] w-[100%] absolute top-0 left-0 z-[-1] backdrop-saturate-200 backdrop-hue-rotate-180"></div>
     <div className="hero-content flex justify-center items-center flex-col -mt-[1rem]">
       <img
@@ -41,7 +41,7 @@ const Hero = () => (
           placeholder="Search..."
           className="bg-transparent border-none outline-none flex-grow mx-4"
         />
-        <div className="w-[25px] h-[25px] relative">
+      <div className="google-container w-[25px] h-[25px] relative hover:circle-hover">
           <div
             className="h-2 w-2 bg-red-500 rounded-full absolute"
             style={{ top: "8px", left: "16px" }}

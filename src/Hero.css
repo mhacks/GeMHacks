@@ -7,6 +7,21 @@
     z-index: 100;
 }
 
+.google-container .rounded-full {
+    transition: transform 0.3s ease;
+  }
+
+.google-container:hover .bg-green-500 {
+    transform: translateX(2px) translateY(-2px);
+}
+  
+.google-container:hover .bg-blue-500 {
+    transform: translateY(-2px);
+}
+  
+.google-container:hover .bg-yellow-500 {
+    transform: translateY(2px);
+}
 
 .hero {
     z-index: 11;
