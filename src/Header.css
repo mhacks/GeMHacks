@@ -64,4 +64,10 @@ header {
   .nav-links {
     gap: 22px;
   }
+  .header-logo-mhacks {
+    display: none;
+  }
+  .header-logo-google {
+    display: none;
+  }
 }
