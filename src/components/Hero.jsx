@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "../Hero.css";
 import Button from "./Button";
 
@@ -5,7 +6,25 @@ const openInNewTab = (url) => {
   window.open(url, "_blank", "noopener,noreferrer");
 };
 
-const Hero = () => (
+const Hero = () => {
+  const [typedText, setTypedText] = useState('');
+  const fullText = "Appril 12th - 14th, 2024";
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < fullText.length) {
+        setTypedText((prev) => prev + fullText.charAt(index));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
   <div className="mx-4 lg:mx-[230px] mb-[106px] mt-[7px] h-auto sm:w-auto min-h-[75vh] justify-center content-center bg-fuchsia-300 border-4 border-black hero-container">
     <div className="hero-content flex justify-center items-center flex-col -mt-[1rem]">
       <img
@@ -35,11 +54,9 @@ const Hero = () => (
           alt="Search"
           className="h-[2vh]"
         />
-        <input
-          type="text"
-          placeholder="Search..."
-          className="bg-transparent border-none outline-none flex-grow mx-4"
-        />
+        <div className="bg-transparent border-none outline-none flex-grow mx-4 text-black font-bold text-lg">
+          {typedText}
+        </div>
         <div className="w-[25px] h-[25px] relative">
           <div
             className="h-2 w-2 bg-red-500 rounded-full absolute"
@@ -69,6 +86,7 @@ const Hero = () => (
       </div>
     </div>
   </div>
-);
+  );
+  };
 
 export default Hero;
