@@ -14,7 +14,7 @@ const Header = () => (
                         <li><a href="#faq" className="text-white hover:underline-custom font-bold font-archivo text-xl">FAQ</a></li>
                     </ul>
                 </nav>
-                <img src={process.env.PUBLIC_URL + '/images/logos/google_logo.svg'} alt="GoogleLogo" style={{'marginLeft': "auto"}} className="header-logo header-logo-google"/>
+                <img src={process.env.PUBLIC_URL + '/images/logos/google_logo.png'} alt="GoogleLogo" style={{'marginLeft': "auto"}} className="header-logo header-logo-google"/>
             </div>
         </header>
     );
