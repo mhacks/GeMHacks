@@ -24,6 +24,27 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Open a random site
+  const openRandomSite = () => {
+    const sites = [
+      "https://medium.com/hackathon-hackers/mhacks-from-dream-to-reality-32e2e55e8136",
+      "https://news.mlh.io/tag/mhacks",
+      "https://mhacks.tumblr.com/",
+      "https://www.forbes.com/sites/amitchowdhry/2013/02/06/mhacks-at-the-university-of-michigan-was-the-largest-student-run-hackathon/?sh=3bf8e0073592",
+      "https://obamawhitehouse.archives.gov/photos-and-video/photo/2013/09/university-michigans-mhacks-hackathon",
+      "https://www.michigandaily.com/uncategorized/inside-mhacks/",
+      "https://cse.engin.umich.edu/stories/mhacks-ai-powered-interior-design-assistant-wins-midwests-largest-student-run-hackathon",
+      "https://cse.engin.umich.edu/stories/cs-students-revive-mhacks-legacy",
+      "https://www.instagram.com/mhacks_/",
+      "https://ai.google.dev/?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oFz6lPt7ZGW4aDs6jMtOIheTu-x78z71s9H2dAznxeEh-COVzZny0RoCJqQQAvD_BwE",
+      "https://www.google.com/about/",
+      "https://about.google/belonging/"
+    ];
+
+    let randomIndex = Math.floor(Math.random() * sites.length);
+    openInNewTab(sites[randomIndex]);
+  };
+
   return (
   <div className="mx-4 lg:mx-[230px] mb-[106px] mt-[7px] h-auto sm:w-auto min-h-[75vh] justify-center content-center bg-fuchsia-300 border-4 border-black hero-container">
     <div className="hero-content flex justify-center items-center flex-col -mt-[1rem]">
@@ -80,7 +101,7 @@ const Hero = () => {
         <Button onClick={() => openInNewTab("https://tally.so/r/w2eB7j")}>
           Apply!
         </Button>
-        <Button onClick={() => openInNewTab("https://perchance.org/famous-scientist")} >
+        <Button onClick={openRandomSite} >
           I'm Feeling Lucky
         </Button>
       </div>
