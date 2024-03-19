@@ -1,8 +1,8 @@
 .moving-objects-container {
   position: absolute;
-  top: 12vh; /* Adjust as needed */
-  width: 100%; /* Set to viewport width */
-  height: 88vh; /* Adjust height as needed */
+  top: 12vh; 
+  width: 100%; 
+  height: 88.35vh; 
   z-index: 5;
   overflow-x: hidden; /* Hide overflow to prevent horizontal scroll */
 }

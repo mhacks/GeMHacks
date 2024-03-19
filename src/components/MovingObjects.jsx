@@ -22,8 +22,8 @@ const MovingObjects = () => {
       const speed = Math.random() * (10) + 80; 
       const scale = Math.random() * (0.3 - 0.2) + 0.2;
       const direction = index % 2 === 0 ? 'moveRight' : 'moveLeft';
-      const top = `${Math.random() * (100 - 5) + 10}%`;
-      const left = `${Math.random() * (100 - 5) + 10}%`;
+      const top = `${Math.random() * (100 - 5) + 5}%`;
+      const left = `${Math.random() * (100 - 5) + 5}%`;
       return { imagePath, speed, scale, direction, top, left }; 
     });
 
@@ -33,7 +33,7 @@ const MovingObjects = () => {
   return (
     <div className="moving-objects-container absolute top-0 left-0 w-full h-full pointer-events-none">
       {objects.map((obj, index) => (
-        <Parallax speed={-Math.random() * 20 - 30} key={index}>
+        <Parallax speed={-Math.random() * 20 - 10} key={index}>
         <img
           key={index}
           src={process.env.PUBLIC_URL + obj.imagePath}
