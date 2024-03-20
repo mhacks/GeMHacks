@@ -21,13 +21,20 @@ export default function Team() {
             <h1 class="text-xl font-syncopate font-bold text-black">Tech</h1>
             <p className="py-3 font-bold font-inter">
               Kevin Wang, <br />
-              Harry Sanders, <br />
               Arnav Shah, <br />
+              Blaire Pang, <br />
+              Jasmine Hou
+            </p>
+          </div>
+        </div>
+
+        <div class="p-10 w-64 h-72 border-black border-2 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white">
+          <div class="flex flex-col items-center justify-center h-full">
+            <h1 class="text-xl font-syncopate font-bold text-black">Tech</h1>
+            <p className="py-3 font-bold font-inter">
+              Harry Sanders, <br />
               Akira Li, <br />
               Anish Chandra, <br />
-              Blaire Pang, <br />
-              Jasmine Hou,
-              <br />
               Gannon Smith
               <br />
             </p>
@@ -46,7 +53,11 @@ export default function Team() {
             </p>
           </div>
         </div>
+      </div>
+      <br />
+      <br />
 
+      <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <div class="p-10 w-64 h-72 border-black border-2 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white">
           <div class="flex flex-col items-center justify-center h-full">
             <h1 class="text-xl font-syncopate font-bold text-black">
@@ -84,19 +95,8 @@ export default function Team() {
             </p>
           </div>
         </div>
-        <div class="p-10 w-64 h-72 border-black border-2 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white">
-          <div class="flex flex-col items-center justify-center h-full">
-            <h1 class="text-xl font-syncopate font-bold text-black">
-              Advisors
-            </h1>
-            <p className="py-5 font-bold font-inter">
-              Adviti Mishra, <br />
-              Spencer Goodwin <br /> <br />
-              <br />
-            </p>
-          </div>
-        </div>
       </div>
+
       <br />
       <br />
     </div>
