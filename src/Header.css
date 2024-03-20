@@ -60,8 +60,14 @@ header {
   width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
   .nav-links {
     gap: 22px;
+  }
+  .header-logo-mhacks {
+    display: none;
+  }
+  .header-logo-google {
+    display: none;
   }
 }

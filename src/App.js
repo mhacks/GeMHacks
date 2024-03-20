@@ -21,14 +21,11 @@ function App() {
 
       <Prizes id="prizes"/>
       <FAQ id="faq"/>
-
       <footer className="w-full font-bold font-archivo text-center border-t border-grey p-4 pin-b bg-purple-200 text-black">
         &copy; 2024 MHacks
       </footer>
       </div>
     
-      </div>
-      <div className="h-[100vh]">
       </div>
     </div>
   );
