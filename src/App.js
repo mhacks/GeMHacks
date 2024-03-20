@@ -15,12 +15,12 @@ function App() {
     
       <div className="flex flex-col min-h-screen justify-between">
       <Marquee items={["Google x MHacks", "Google x MHacks", "Google x MHacks"]} />
-      <h1 className="text-4xl font-syncopate font-bold pt-10 px-20">About</h1>
+      <h1 id='about' className="text-4xl font-syncopate font-bold pt-10 px-20">About</h1>
       <h1 className="text-4xl font-syncopate font-bold px-20">Google x MHacks</h1>
       <p className="px-20 py-10 font-bold font-inter">Google x MHacks is a 24-hour hackathon hosted by Google and MHacks.</p>
 
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-syncopate font-bold">FAQS</h1>
+        <h1 id='faq' className="text-4xl font-syncopate font-bold">FAQS</h1>
         <Accordion className="m-4" question="What is Google x MHacks?" answer="Placeholder." />
         <Accordion className="m-4" question="How Many Can Be on a Team?" answer="Hackers may form teams of up to 4 people. Teams can be formed before or during the event." />
         <Accordion className="m-4" question="What is MHacks x Google?" answer="Placeholder." />
@@ -32,8 +32,6 @@ function App() {
       </footer>
       </div>
     
-      </div>
-      <div className="h-[100vh]">
       </div>
     </div>
   );

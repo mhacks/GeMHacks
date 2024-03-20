@@ -21,7 +21,7 @@ header {
   width: 100%;
 }
 
-.nav-links {
+/* .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
@@ -37,10 +37,37 @@ header {
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   font-weight:600;
+} */
+
+.nav-links a {
+  position: relative;
 }
 
-@media (max-width: 700px) {
+.nav-links a:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
   .nav-links {
     gap: 22px;
+  }
+  .header-logo-mhacks {
+    display: none;
+  }
+  .header-logo-google {
+    display: none;
   }
 }

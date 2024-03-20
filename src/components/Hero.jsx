@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "../Hero.css";
 import Button from "./Button";
 
@@ -5,13 +6,52 @@ const openInNewTab = (url) => {
   window.open(url, "_blank", "noopener,noreferrer");
 };
 
-const Hero = () => (
+const Hero = () => {
+  const [typedText, setTypedText] = useState('');
+  const fullText = "Appril 12th - 14th, 2024";
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < fullText.length) {
+        setTypedText((prev) => prev + fullText.charAt(index));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Open a random site
+  const openRandomSite = () => {
+    const sites = [
+      "https://medium.com/hackathon-hackers/mhacks-from-dream-to-reality-32e2e55e8136",
+      "https://news.mlh.io/tag/mhacks",
+      "https://mhacks.tumblr.com/",
+      "https://www.forbes.com/sites/amitchowdhry/2013/02/06/mhacks-at-the-university-of-michigan-was-the-largest-student-run-hackathon/?sh=3bf8e0073592",
+      "https://obamawhitehouse.archives.gov/photos-and-video/photo/2013/09/university-michigans-mhacks-hackathon",
+      "https://www.michigandaily.com/uncategorized/inside-mhacks/",
+      "https://cse.engin.umich.edu/stories/mhacks-ai-powered-interior-design-assistant-wins-midwests-largest-student-run-hackathon",
+      "https://cse.engin.umich.edu/stories/cs-students-revive-mhacks-legacy",
+      "https://www.instagram.com/mhacks_/",
+      "https://ai.google.dev/?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oFz6lPt7ZGW4aDs6jMtOIheTu-x78z71s9H2dAznxeEh-COVzZny0RoCJqQQAvD_BwE",
+      "https://www.google.com/about/",
+      "https://about.google/belonging/"
+    ];
+
+    let randomIndex = Math.floor(Math.random() * sites.length);
+    openInNewTab(sites[randomIndex]);
+  };
+
+  return (
   <div className="mx-4 lg:mx-[230px] mb-[106px] mt-[7px] h-auto sm:w-auto min-h-[75vh] justify-center content-center bg-fuchsia-300 border-4 border-black hero-container">
     <div className="hero-content flex justify-center items-center flex-col -mt-[1rem]">
       <img
         src={process.env.PUBLIC_URL + "/images/logos/google_hero_logo.webp"}
         alt="hero"
-        className="content-center justify-center h-[140px] w-[400px]"
+        className="content-center justify-center h-auto sm:w-[30vw] w-[60vw]"
         style={{ filter: "drop-shadow(3px 4px 0px #000)" }}
       />
       <img
@@ -29,17 +69,15 @@ const Hero = () => (
           Hacks
         </div>
       </div>
-      <div className="flex items-center justify-between rounded-full bg-white h-[4vh] w-[44vw] mt-[4vh] border-[1pt] border-black drop-shadow-md px-4">
+      <div className="flex items-center justify-between rounded-full bg-white h-[6vh] sm:w-[44vw] w-[80vw] mt-[4vh] border-[1pt] border-black drop-shadow-md px-4">
         <img
           src={process.env.PUBLIC_URL + "/images/icons/search_icon.svg"}
           alt="Search"
           className="h-[2vh]"
         />
-        <input
-          type="text"
-          placeholder="Search..."
-          className="bg-transparent border-none outline-none flex-grow mx-4"
-        />
+        <div className="bg-transparent border-none outline-none flex-grow mx-4 text-black font-bold text-lg">
+          {typedText}
+        </div>
         <div className="w-[25px] h-[25px] relative">
           <div
             className="h-2 w-2 bg-red-500 rounded-full absolute"
@@ -63,12 +101,13 @@ const Hero = () => (
         <Button onClick={() => openInNewTab("https://tally.so/r/w2eB7j")}>
           Apply!
         </Button>
-        <Button onClick={() => openInNewTab("https://perchance.org/famous-scientist")} >
+        <Button onClick={openRandomSite} >
           I'm Feeling Lucky
         </Button>
       </div>
     </div>
   </div>
-);
+  );
+  };
 
 export default Hero;
