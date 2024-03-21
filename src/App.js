@@ -6,6 +6,8 @@ import Marquee from "./components/Marquee";
 import Prizes from './components/Prizes';
 import About from './components/About';
 import FAQ from './components/FAQ';
+import ScrollToTop from "react-scroll-up";
+import { FaArrowUp } from "react-icons/fa";
 
 function App() {
   return (
@@ -17,10 +19,13 @@ function App() {
     
       <div className="flex flex-col min-h-screen justify-between">
       <Marquee items={["Google x MHacks", "Google x MHacks", "Google x MHacks"]} />
-      <About />
+      <About id="about"/>
 
       <Prizes id="prizes"/>
       <FAQ id="faq"/>
+      <ScrollToTop showUnder={160}>
+        <span><FaArrowUp /></span>
+      </ScrollToTop>
       <footer className="w-full font-bold font-archivo text-center border-t border-grey p-4 pin-b bg-purple-200 text-black">
         &copy; 2024 MHacks
       </footer>
