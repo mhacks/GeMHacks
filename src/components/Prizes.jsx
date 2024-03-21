@@ -1,6 +1,6 @@
-export default function Prizes() {
+export default function Prizes({id}) {
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center" id={id}>
             <h1 className='mb-6 text-4xl font-syncopate font-bold'>PRIZES</h1>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
 

@@ -1,8 +1,8 @@
 import Accordion from "./Accordian"
 
-export default function FAQ() {
+export default function FAQ({id}) {
     return (
-        <div className="mt-10 flex flex-col items-center justify-center">
+        <div className="mt-10 flex flex-col items-center justify-center" id={id}>
             <h1 className="text-4xl font-syncopate font-bold">FAQS</h1>
             <Accordion className="m-4" question="Who can apply?" answer="Anyone that is 18+ is welcome to apply!" />
             <Accordion className="m-4" question="When will this event take place?" answer="The event will be held on April 12th - 14th. Workshops will be held on Friday (4/12) and hacking will be done on Saturday and Sunday." />
@@ -12,6 +12,7 @@ export default function FAQ() {
             <Accordion className="m-4" question="How do teams work?" answer="Teams can be up to 4 members, but acceptances are individual." />
             <Accordion className="m-4" question="Do I need experience to participate?" answer="While prior experience using AI models in project will help, prior experience is not required! At MHacks 16 last fall, almost half of all hackers had never attended a hackathon before. For this event, we encourage anyone who’s interested to apply." />
             <Accordion className="m-4" question="What if I still have additional questions??" answer="Send us an email at help@mhacks.org and we'll get back to you shortly :)." />
+            <button onClick={() => window.location.href = "https://tally.so/r/w2eB7j"} className="flex cursor-pointer items-center mt-20 mb-20 rounded-md border-2 border-black bg-blue-400 px-10 py-3 font-bold font-archivo shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">Apply Now</button>
       </div>
     )
 }
