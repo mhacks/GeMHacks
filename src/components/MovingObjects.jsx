@@ -16,31 +16,51 @@ const MovingObjects = () => {
   const [objects, setObjects] = useState([]);
 
   useEffect(() => {
-    const totalObjects = 20;
+    initializeObjects(20); 
+  }, []);
+
+  const initializeObjects = (totalObjects) => {
     const generatedObjects = Array.from({ length: totalObjects }).map((_, index) => {
-      const imagePath = imagePaths[Math.floor(Math.random() * imagePaths.length)];
-      const speed = Math.random() * 10 + 80;
-      const direction = index % 2 === 0 ? 'moveLeft' : 'moveRight';
-      const xPos = direction === 'moveRight' ? Math.random() * 50 + 50 : Math.random() * 50 - 30; 
-      return { imagePath, speed, direction, xPos };
+      return createObject(index);
     });
 
     setObjects(generatedObjects);
-  }, []);
+  };
+
+  const createObject = (id) => {
+    const imagePath = imagePaths[Math.floor(Math.random() * imagePaths.length)];
+    const speed = Math.random() * 10 + 80;
+    const direction = id % 2 === 0 ? 'moveLeft' : 'moveRight';
+    const xPos = direction === 'moveRight' ? Math.random() * 50 + 50 : Math.random() * 50 - 30;
+    return { id, imagePath, speed, direction, xPos };
+  };
+
+  const handleAnimationEnd = (id) => {
+    setObjects((prevObjects) => {
+      const newObjects = [...prevObjects];
+      const index = newObjects.findIndex((obj) => obj.id === id);
+      if (index !== -1) {
+        newObjects[index] = createObject(id);
+      }
+      return newObjects;
+    });
+  };
 
   return (
     <div className="moving-objects-container">
-      {objects.map((obj, index) => (
-        <Parallax speed={-Math.random() * 20 - 10} key={index}>
+      {objects.map((obj) => (
+        <Parallax speed={-Math.random() * 20 - 10} key={obj.id}>
           <img
             src={process.env.PUBLIC_URL + obj.imagePath}
             style={{
               animation: `${obj.direction} ${obj.speed}s linear infinite`,
-              top: `${(Math.random()*100) - 8}vh`,
-              left: `${obj.xPos}%`, 
+              top: `${(Math.random() * 100) - 8}vh`,
+              left: `${obj.xPos}%`,
+              opacity: 0.95,
             }}
             className="moving-object"
             alt=""
+            onAnimationEnd={() => handleAnimationEnd(obj.id)}
           />
         </Parallax>
       ))}
