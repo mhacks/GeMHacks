@@ -16,16 +16,17 @@ const MovingObjects = () => {
   const [objects, setObjects] = useState([]);
 
   useEffect(() => {
+    const initializeObjects = (totalObjects) => {
+      const generatedObjects = Array.from({ length: totalObjects }).map((_, index) => {
+        return createObject(index);
+      });
+  
+      setObjects(generatedObjects);
+    };
+
     initializeObjects(20); 
   }, []);
 
-  const initializeObjects = (totalObjects) => {
-    const generatedObjects = Array.from({ length: totalObjects }).map((_, index) => {
-      return createObject(index);
-    });
-
-    setObjects(generatedObjects);
-  };
 
   const createObject = (id) => {
     const imagePath = imagePaths[Math.floor(Math.random() * imagePaths.length)];
