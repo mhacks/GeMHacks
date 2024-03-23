@@ -9,7 +9,6 @@ const imagePaths = [
   '/images/abstract/b08.svg',
   '/images/abstract/b09.svg',
   '/images/abstract/b10.png',
-  '/images/abstract/b11.png',
   '/images/abstract/b12.png',
 ];
 
@@ -17,13 +16,13 @@ const MovingObjects = () => {
   const [objects, setObjects] = useState([]);
 
   useEffect(() => {
-    const generatedObjects = Array.from({ length: 20 }).map(() => {
+    const totalObjects = 20;
+    const generatedObjects = Array.from({ length: totalObjects }).map((_, index) => {
       const imagePath = imagePaths[Math.floor(Math.random() * imagePaths.length)];
-      const speed = Math.random() * (10) + 80;
-      const scale = Math.random() * (0.3 - 0.2) + 0.2; 
-      const direction = Math.random() > 0.5 ? 'moveRight' : 'moveLeft'; 
-      const xPos = Math.random() * 100; 
-      return { imagePath, speed, scale, direction, xPos };
+      const speed = Math.random() * 10 + 80;
+      const direction = index % 2 === 0 ? 'moveLeft' : 'moveRight';
+      const xPos = direction === 'moveRight' ? Math.random() * 50 + 50 : Math.random() * 50 - 30; 
+      return { imagePath, speed, direction, xPos };
     });
 
     setObjects(generatedObjects);
@@ -37,10 +36,8 @@ const MovingObjects = () => {
             src={process.env.PUBLIC_URL + obj.imagePath}
             style={{
               animation: `${obj.direction} ${obj.speed}s linear infinite`,
-              transform: `scale(${obj.scale})`,
-              top: `${index * 15}%`,
+              top: `${(Math.random()*100) - 8}vh`,
               left: `${obj.xPos}%`, 
-              opacity: 0.9,
             }}
             className="moving-object"
             alt=""
