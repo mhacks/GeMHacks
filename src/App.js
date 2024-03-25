@@ -8,14 +8,17 @@ import About from './components/About';
 import FAQ from './components/FAQ';
 import ScrollToTop from "react-scroll-up";
 import { FaArrowUp } from "react-icons/fa";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   return (
     <div className="App" style={{ backgroundColor: "#FF73A9", height: "100vh", position: "relative" }}>
       <div>
-      <Header />
-      <Hero />
-      <MovingObjects />
+      <ParallaxProvider>
+          <Header />
+          <Hero />
+          <MovingObjects />
+      </ParallaxProvider>
     
       <div className="flex flex-col min-h-screen justify-between">
       <Marquee items={["Google x MHacks", "Google x MHacks", "Google x MHacks"]} />
