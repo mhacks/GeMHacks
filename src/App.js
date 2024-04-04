@@ -26,7 +26,7 @@ function App() {
       <ScrollToTop showUnder={160}>
         <span><FaArrowUp /></span>
       </ScrollToTop>
-      <footer className="w-full font-bold font-archivo text-center border-t border-grey p-4 pin-b bg-purple-200 text-black">
+      <footer className="w-full mt-12 font-bold font-archivo text-center border-t border-grey p-4 pin-b bg-purple-200 text-black">
         &copy; 2024 MHacks
       </footer>
       </div>

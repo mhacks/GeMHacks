@@ -6,7 +6,7 @@ export default function About({id}) {
             <h1 className="text-4xl font-syncopate font-bold px-20">Google x MHacks</h1>
             <p className="px-20 py-10 font-medium font-inter">
             MHacks is the University of Michigan's premier student-run hackathon. <span className="font-bold">This April 12th to 14th</span>, 
-            we are collaborating with Google to host Google x MHacks, the Google AI Hackathon, at the Google Ann Arbor Office.
+            we are collaborating with Google to host Google x MHacks, the Google AI Hackathon, at the Central Campus Classroom Building (CCCB).
             A few workshops, led by Google engineers and PMs, will be hosted on Friday the 12th, 
             while the hackathon will take place Saturday and Sunday. 
             <br/> <br/>
@@ -21,6 +21,7 @@ export default function About({id}) {
             note that we will be reviewing applications on a <span className="font-bold">rolling basis</span> so 
             our deadline may close earlier as slots fill up.
             </p>
+            <button onClick={() => window.location.href = "https://docs.google.com/spreadsheets/d/1aOLLwfiqdxOzf_YmbreKd7pAoeJDdBOZgPfWk593pls/edit#gid=877663356"} className="mx-auto flex cursor-pointer items-center mt-20 mb-20 rounded-md border-2 border-black bg-blue-400 px-10 py-3 font-bold font-archivo shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">Event Schedule</button>
       </div>
     )
 }
