@@ -28,6 +28,7 @@ const Hero = () => {
     }, 100);
 
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Open a random site
