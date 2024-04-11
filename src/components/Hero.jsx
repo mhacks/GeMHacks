@@ -98,8 +98,12 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row md:gap-2 gap-4 content-center justify-center mt-10">
-        <Button onClick={() => openInNewTab("https://tally.so/r/w2eB7j")}>
-          Apply!
+        <Button
+          onClick={() => {
+            openInNewTab('https://safe-banon-80d.notion.site/Hacker-Guide-079b584c6deb446e88c53712dc0f9ecb')
+          }}
+        >
+          Hacker Guide
         </Button>
         <Button onClick={openRandomSite} >
           I'm Feeling Lucky
