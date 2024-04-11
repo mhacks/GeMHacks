@@ -9,8 +9,8 @@ const Header = () => (
                 <nav style={{ flexGrow: 1 }}>
                     <ul className="nav-links flex justify-center lg:space-x-20">
                         <li><Link to="about" activeClass='active' smooth={true} spy={true} duration={500} className="text-white hover:underline-custom font-bold text-xl font-archivo">ABOUT</Link></li>
-                        <li><Link to="prizes" activeClass='active' smooth={true} spy={true} duration={500} className="text-white hover:underline-custom font-bold font-archivo text-xl">PRIZES</Link></li>
-                        <li><Link to='faq' activeClass='active' className="text-white hover:underline-custom font-bold font-archivo text-xl" smooth={true} spy={true} duration={500} >FAQ</Link></li>
+                        <li><Link to="prizes" activeClass='active' smooth={true} spy={true} duration={750} className="text-white hover:underline-custom font-bold font-archivo text-xl">PRIZES</Link></li>
+                        <li><Link to='faq' activeClass='active' className="text-white hover:underline-custom font-bold font-archivo text-xl" smooth={true} spy={true} duration={1000} >FAQ</Link></li>
                     </ul>
                 </nav>
                 <a href="https://www.google.com/search?q=mhacks&oq=mhacks" target="_blank" rel="noopener noreferrer">
