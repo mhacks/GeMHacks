@@ -9,6 +9,7 @@ const openInNewTab = (url) => {
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const fullText = "Appril 12th - 14th, 2024";
+  const correctText = "April 12th - 14th, 2024";
 
   useEffect(() => {
     let index = 0;
@@ -18,6 +19,11 @@ const Hero = () => {
         index++;
       } else {
         clearInterval(interval);
+        setTimeout(() => {
+          if (typedText !== correctText) {
+            setTypedText(correctText); // Resets to the correct date if incorrect
+          }
+        }, 0);
       }
     }, 100);
 
